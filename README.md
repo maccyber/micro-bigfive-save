@@ -1,6 +1,6 @@
 # micro-bigfive-save
 
-micro webservice that communicates with firebase
+micro webservice stores bigfive answers
 
 ## Add data
 
@@ -87,7 +87,7 @@ $ curl -v http://localhost:3000
 
 ### Request
 
-```GET /```
+```GET /?id=58a475c47bd88a143a79d4a2```
 
 ```sh
 $ curl -v http://localhost:3000/?id=58a475c47bd88a143a79d4a2
