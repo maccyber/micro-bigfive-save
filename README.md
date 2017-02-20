@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/maccyber/micro-bigfive-save.svg?branch=master)](https://travis-ci.org/maccyber/micro-bigfive-save)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Code Climate](https://codeclimate.com/github/maccyber/micro-bigfive-save/badges/gpa.svg)](https://codeclimate.com/github/maccyber/micro-bigfive-save)
 
 # micro-bigfive-save
 
@@ -122,7 +121,6 @@ This README.md
 
 ## Now
 
-
 ```
 now secret add BIGFIVE_SAVE_DATABASE_URL something.mlab.com
 now secret add BIGFIVE_SAVE_DB bigfive
@@ -133,10 +131,12 @@ now secret add BIGFIVE_SAVE_TOKEN_KEY "Gibberish, jibberish, jibber-jabber and g
 now -e BIGFIVE_SAVE_DATABASE_URL=@bigfive_save_database_url -e BIGFIVE_SAVE_DB=@bigfive_save_db -e BIGFIVE_SAVE_USER=@bigfive_save_user -e BIGFIVE_SAVE_PASSWORD=@bigfive_save_password -e BIGFIVE_SAVE_PORT=@bigfive_save_port -e BIGFIVE_SAVE_TOKEN_KEY=@bigfive_save_token_key
 ```
 
-
 ## License
 [MIT](LICENSE)
 
 ## About
 
-![alt text](https://robohash.org/micro-bigfive-save.png "Robohash image of micro-bigfive-save")
+Created by [zrrzzt](https://github.com/zrrrzzt) and [maccyber](https://github.com/maccyber)
+
+![alt text](https://robots.kebabstudios.party/zrrrzzt.png "Robohash image of zrrrzzt") 
+![alt text](https://robots.kebabstudios.party/maccyber.png "Robohash image of maccyber")
