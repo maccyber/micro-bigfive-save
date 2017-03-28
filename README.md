@@ -19,6 +19,12 @@ https://save.bigfive.maccyber.io/
 $ curl -v -H "Authorization: INSERT-JWT-TOKEN" http://localhost:3000 -d '{"someData": "this is posted to database" }'
 ```
 
+```PUT /:id```
+
+```sh
+$ curl -v -H "Authorization: INSERT-JWT-TOKEN" http://localhost:3000/58a475c47bd88a143a79d4a2 -X PUT -d '{"someData": "this is posted to database" }'
+```
+
 ### Response
 
 ```JavaScript
@@ -30,10 +36,10 @@ $ curl -v -H "Authorization: INSERT-JWT-TOKEN" http://localhost:3000 -d '{"someD
 ## Get all data
 
 ### Request
-```GET /```
+```GET /search```
 
 ```sh
-$ curl -v http://localhost:3000
+$ curl -v http://localhost:3000/search
 ```
 
 ### Response
@@ -106,19 +112,6 @@ Same as get all data
 
 ## Help
 
-### Request
-
-```GET /help```
-
-```sh
-$ curl -v http://localhost:3000
-```
-
-### Response
-
-This README.md
-
-
 ## Now
 
 ```
@@ -132,11 +125,12 @@ now -e BIGFIVE_SAVE_DATABASE_URL=@bigfive_save_database_url -e BIGFIVE_SAVE_DB=@
 ```
 
 ## License
+
 [MIT](LICENSE)
 
 ## About
 
-Created by [zrrzzt](https://github.com/zrrrzzt) and [maccyber](https://github.com/maccyber)
+Created with :heart: by [zrrzzt](https://github.com/zrrrzzt) and [maccyber](https://github.com/maccyber)
 
 ![alt text](https://robots.kebabstudios.party/zrrrzzt.png "Robohash image of zrrrzzt") 
 ![alt text](https://robots.kebabstudios.party/maccyber.png "Robohash image of maccyber")

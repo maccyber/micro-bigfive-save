@@ -29,4 +29,3 @@ tap.test('generatating failing jwt', (t) => {
     t.end()
   })
 })
-

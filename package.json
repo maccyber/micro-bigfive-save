@@ -53,7 +53,7 @@
     "jsonwebtoken": "7.3.0",
     "marked": "0.3.6",
     "micro": "7.3.0",
-    "mongodb": "2.2.25"
+    "mongojs": "2.4.0"
   },
   "now": {
     "alias": "save.bigfive.maccyber.io",
