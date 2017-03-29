@@ -3,6 +3,4 @@ node_js:
   - "7"
 after_success:
   - npm run coveralls
-  - test $TRAVIS_BRANCH = "master" && npm i -g now
-  - now -t=$NOW_TOKEN -e BIGFIVE_SAVE_DATABASE_URL=@bigfive_save_database_url -e BIGFIVE_SAVE_DB=@bigfive_save_db -e BIGFIVE_SAVE_USER=@bigfive_save_user -e BIGFIVE_SAVE_PASSWORD=@bigfive_save_password -e BIGFIVE_SAVE_PORT=@bigfive_save_port -e BIGFIVE_SAVE_TOKEN_KEY=@bigfive_save_token_key --npm
-  - now -t=$NOW_TOKEN alias
+  - test $TRAVIS_BRANCH = "master" && npm i -g now && now -t=$NOW_TOKEN --npm -E results.env && now -t=$NOW_TOKEN alias
