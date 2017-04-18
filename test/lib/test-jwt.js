@@ -14,16 +14,15 @@ const options = {
   expiresIn: '1h',
   issuer: 'https://auth.t-fk.no'
 }
-test('generatating jwt', t => {
+
+test('generatating jwt', async t => {
   const jwt = generateJwt({tokenKey: config.tokenKey, payload: payload, options: options})
-  validateJwt({jwt: jwt, tokenKey: config.tokenKey}).then(data => {
-    t.deepEqual(data.name, 'maccyber', 'jwt generate and validate OK')
-  })
+  const data = await validateJwt({jwt: jwt, tokenKey: config.tokenKey})
+  t.deepEqual(data.name, 'maccyber', 'jwt generate and validate OK')
 })
 
-test('generatating failing jwt', t => {
+test('generatating failing jwt', async t => {
   const jwt = generateJwt({tokenKey: 'wrongtoken', payload: payload, options: options})
-  validateJwt({jwt: jwt, tokenKey: config.tokenKey}).catch(err => {
-    t.deepEqual(err.message, 'Given token or data is invalid', 'jwt validate fail')
-  })
+  const error = await t.throws(validateJwt({jwt: jwt, tokenKey: config.tokenKey}))
+  t.deepEqual(error.message, 'Given token or data is invalid', 'jwt validate fail')
 })

@@ -1,7 +1,7 @@
 {
   "name": "micro-bigfive-save",
   "description": "micro webservice that stores bigfive answers",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "private": true,
   "author": {
@@ -18,7 +18,7 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=7.7.4"
+    "node": ">=7.9.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -43,18 +43,18 @@
   },
   "homepage": "https://github.com/maccyber/micro-bigfive-save",
   "devDependencies": {
-    "ava": "0.18.2",
-    "axios": "0.15.3",
-    "coveralls": "2.12.0",
+    "ava": "0.19.1",
+    "axios": "0.16.1",
+    "coveralls": "2.13.0",
     "nsp": "2.6.3",
     "nyc": "10.2.0",
-    "standard": "9.0.2",
-    "test-listen": "1.0.1"
+    "standard": "10.0.2",
+    "test-listen": "1.0.2"
   },
   "dependencies": {
     "jsonwebtoken": "7.3.0",
     "marked": "0.3.6",
-    "micro": "7.3.0",
+    "micro": "7.3.2",
     "micro-match": "0.1.2",
     "mongojs": "2.4.0"
   },
