@@ -7,7 +7,7 @@ micro webservice stores bigfive answers
 
 ## Example
 
-https://save.bigfive.maccyber.io/
+https://save.bigfive.world
 
 ## Add data
 
@@ -110,18 +110,32 @@ $ curl -v http://localhost:3000/?id=58a475c47bd88a143a79d4a2
 
 Same as get all data
 
-## Help
+## Delete data
 
-## Now
+```DELETE /:id```
 
+```sh
+$ curl -v -H "Authorization: INSERT-JWT-TOKEN" -X DELETE -v http://localhost:3000/58a475c47bd88a143a79d4a2
 ```
+
+### Response
+
+```JavaScript
+{
+  "id": "58a475c47bd88a143a79d4a2"
+}
+```
+
+## Deploy to Now
+
+```bash
 now secret add BIGFIVE_SAVE_DATABASE_URL something.mlab.com
 now secret add BIGFIVE_SAVE_DB bigfive
 now secret add BIGFIVE_SAVE_USER bigfive
 now secret add BIGFIVE_SAVE_PASSWORD password
 now secret add BIGFIVE_SAVE_PORT 53659
 now secret add BIGFIVE_SAVE_TOKEN_KEY "Gibberish, jibberish, jibber-jabber and gobbledygook"
-now -e BIGFIVE_SAVE_DATABASE_URL=@bigfive_save_database_url -e BIGFIVE_SAVE_DB=@bigfive_save_db -e BIGFIVE_SAVE_USER=@bigfive_save_user -e BIGFIVE_SAVE_PASSWORD=@bigfive_save_password -e BIGFIVE_SAVE_PORT=@bigfive_save_port -e BIGFIVE_SAVE_TOKEN_KEY=@bigfive_save_token_key
+now -E results.env
 ```
 
 ## License
