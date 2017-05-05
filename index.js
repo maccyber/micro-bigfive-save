@@ -7,6 +7,7 @@ const { json, send } = require('micro')
 const match = require('micro-match')
 const config = require('./config')
 const addOrUpdate = require('./lib/add-or-update')
+const deleteDocument = require('./lib/delete-document')
 const search = require('./lib/search')
 const validateJwt = require('./lib/validate-jwt')
 
@@ -29,6 +30,18 @@ module.exports = async (req, res) => {
         data: data
       }
       result = await addOrUpdate(options)
+    }
+  } else if (req.method === 'DELETE') {
+    const jwt = req.headers.authorization
+    const decoded = await validateJwt({jwt: jwt, tokenKey: config.tokenKey})
+    if (decoded) {
+      const {id} = match('/:id', req.url)
+      const options = {
+        action: 'delete',
+        id: id,
+        data: data
+      }
+      result = await deleteDocument(options)
     }
   } else if ((req.method === 'GET' && data.id !== undefined) || pathname === '/search') {
     result = await search(data)
