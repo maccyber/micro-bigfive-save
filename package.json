@@ -1,7 +1,7 @@
 {
   "name": "micro-bigfive-save",
   "description": "micro webservice that stores bigfive answers",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
   "private": true,
   "author": {
@@ -54,7 +54,7 @@
   "dependencies": {
     "jsonwebtoken": "7.4.0",
     "marked": "0.3.6",
-    "micro": "7.3.2",
+    "micro": "7.3.3",
     "micro-match": "0.1.2",
     "mongojs": "2.4.0"
   },
