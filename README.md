@@ -13,13 +13,13 @@ https://save.bigfive.world
 
 ### Request
 
-```POST /```
+```POST / OR /store```
 
 ```sh
 $ curl -v -H "Authorization: INSERT-JWT-TOKEN" http://localhost:3000 -d '{"someData": "this is posted to database" }'
 ```
 
-```PUT /:id```
+```PUT /:id OR /store/:id```
 
 ```sh
 $ curl -v -H "Authorization: INSERT-JWT-TOKEN" http://localhost:3000/58a475c47bd88a143a79d4a2 -X PUT -d '{"someData": "this is posted to database" }'
@@ -112,7 +112,7 @@ Same as get all data
 
 ## Delete data
 
-```DELETE /:id```
+```DELETE /:id OR /store/:id```
 
 ```sh
 $ curl -v -H "Authorization: INSERT-JWT-TOKEN" -X DELETE -v http://localhost:3000/58a475c47bd88a143a79d4a2

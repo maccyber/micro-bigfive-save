@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     const jwt = req.headers.authorization
     const decoded = await validateJwt({jwt: jwt, tokenKey: config.tokenKey})
     if (decoded) {
-      const {id} = match('/:id', req.url)
+      const {id} = match('/:store?/:id', req.url)
       let action = 'add'
       if (id && req.method === 'POST') {
         action = 'update'
@@ -35,7 +35,7 @@ module.exports = async (req, res) => {
     const jwt = req.headers.authorization
     const decoded = await validateJwt({jwt: jwt, tokenKey: config.tokenKey})
     if (decoded) {
-      const {id} = match('/:id', req.url)
+      const {id} = match('/:store?/:id', req.url)
       const options = {
         action: 'delete',
         id: id,
