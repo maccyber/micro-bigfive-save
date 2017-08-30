@@ -1,7 +1,7 @@
 {
   "name": "micro-bigfive-save",
   "description": "micro webservice that stores bigfive answers",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "license": "MIT",
   "private": true,
   "author": {
@@ -18,7 +18,7 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=7.10.0"
+    "node": ">=8.4.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -26,7 +26,8 @@
     "coverage": "nyc ava",
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
-    "start": "micro"
+    "start": "micro",
+    "dev": "micro-dev"
   },
   "keywords": [
     "microservice",
@@ -43,20 +44,21 @@
   },
   "homepage": "https://github.com/maccyber/micro-bigfive-save",
   "devDependencies": {
-    "ava": "0.19.1",
-    "axios": "0.16.1",
+    "ava": "0.22.0",
+    "axios": "0.16.2",
     "coveralls": "2.13.1",
-    "nsp": "2.6.3",
-    "nyc": "10.3.2",
-    "standard": "10.0.2",
+    "micro-dev": "1.2.2",
+    "nsp": "2.7.0",
+    "nyc": "11.1.0",
+    "standard": "10.0.3",
     "test-listen": "1.0.2"
   },
   "dependencies": {
-    "jsonwebtoken": "7.4.0",
+    "jsonwebtoken": "7.4.3",
     "marked": "0.3.6",
-    "micro": "7.3.3",
+    "micro": "8.0.3",
     "micro-match": "0.1.2",
-    "mongojs": "2.4.0"
+    "mongojs": "2.4.1"
   },
   "now": {
     "alias": "save.bigfive.world",
